@@ -1,0 +1,62 @@
+@use './vars' as *;
+@use './mixins' as *;
+@use './header';
+@use './mainPage';
+@use './_mainPage';
+@use './_footer';
+@use './_product';
+@use './_catalog';
+@use './_cart';
+@use './_registration';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-content {
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+}
+
+.center {
+    padding-left: calc(50% - $widthDesktopSite / 2);
+    padding-right: calc(50% - $widthDesktopSite / 2);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
